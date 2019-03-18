@@ -10,7 +10,7 @@ const occupationalField = document.getElementById('occupationalField');
 const Fetch = {
     // Fetches the ten latest jobs.
     fetchJobs: function (countyId = '1', occupationalField = '', viewAmount = '10', pageNumber = '1') {
-        fetch(`http://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=${countyId}&yrkesid=&yrkesomradeid=${occupationalField}&antalrader=${viewAmount}&sida=${pageNumber}`)
+        fetch(`https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?lanid=${countyId}&yrkesid=&yrkesomradeid=${occupationalField}&antalrader=${viewAmount}&sida=${pageNumber}`)
             .then(function (response) {
                 return response.json();
             })
@@ -21,7 +21,7 @@ const Fetch = {
     },
     // Fetches a specific job by Id.
     fetchJobID: function (annonsId) {
-        fetch(`http://api.arbetsformedlingen.se/af/v0/platsannonser/${annonsId}`)
+        fetch(`https://api.arbetsformedlingen.se/af/v0/platsannonser/${annonsId}`)
             .then(function (response) {
                 return response.json();
             })
@@ -30,7 +30,7 @@ const Fetch = {
             })
     },
     fetchSearchJobs: function (yrkesnamn) {
-        fetch(`http://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?nyckelord=${yrkesnamn}`)
+        fetch(`https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?nyckelord=${yrkesnamn}`)
             .then(function (response) {
                 return response.json();
             })
