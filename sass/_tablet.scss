@@ -1,0 +1,11 @@
+.hero {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+.hero:after {
+    margin-left: -200px;
+    border-left: solid 200px transparent;
+    border-right: solid 200px transparent;
+}

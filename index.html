@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Platsbanken</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="hero">
+            <h1>PLATSBANKEN</h1>
+        </div>
+    </header>
+    <main>
+        <div id="controllersContainer">
+            <div id="countyButtons">
+                <button value="1" class="county activeCounty">Stockholm</button>
+                <button value="3" class="county">Uppsala</button>
+                <button value="12" class="county">Skåne</button>
+            </div>
+            <div id="limitButtons">
+                <button value="10" class="limit activeLimit">10</button>
+                <button value="20" class="limit">20</button>
+                <button value="30" class="limit">30</button>
+            </div>
+            <label for="occupational">Sök arbete efter yrkesgrupp:</label>
+            <select name="occupational" id="occupationalField">
+                <option value="">Välj yrkesgrupp...</option>
+                <option value="1">Administration, ekonomi, juridik</option>
+                <option value="2">Bygg och anläggning</option>
+                <option value="20">Chefer och verksamhetsledare</option>
+                <option value="3">Data/IT</option>
+                <option value="4">Kropps- och skönhetsvård</option>
+                <option value="5">Försäljning, inköp, marknadsföring</option>
+                <option value="6">Hantverksyrken</option>
+                <option value="7">Hotell, restaurang, storhushåll</option>
+                <option value="8">Hälso- och sjukvård</option>
+                <option value="9">Industriell tillverkning</option>
+                <option value="10">Installation, drift, underhåll</option>
+                <option value="11">Kultur, media, design</option>
+                <option value="22">Militärt arbete</option>
+                <option value="12">Sanering och renhållning</option>
+                <option value="13">Naturbruk</option>
+                <option value="14">Naturvetenskapligt arbete</option>
+                <option value="15">Pedagogiskt arbete</option>
+                <option value="16">Socialt arbete</option>
+                <option value="17">Säkerhetsarbete</option>
+                <option value="18">Tekniskt arbete</option>
+                <option value="19">Transport</option>
+            </select>
+            <label for="searchInput">Sök jobb efter fritext:</label>
+            <input name="searchInput" id="searchInput" type="search" placeholder="Sök på fritext..." />
+        </div>
+        <div id="jobWrapper">
+            <div class="loading">
+                <img src="images/loading.gif" alt="Loading" />
+                <p>Laddar tillgängliga jobb...</p>
+            </div>
+        </div>
+        <div id="savedJobsWrapper">
+            
+        </div>
+        <div id="paginationWrapper">
+            <div id="pageButtons">
+                <button id="backFive">⇇ -5</button>
+                <button id="back">← -1</button>
+                <button value="1" class="pageNo activePage">1</button>
+                <button value="2" class="pageNo">2</button>
+                <button value="3" class="pageNo">3</button>
+                <button value="4" class="pageNo">4</button>
+                <button value="5" class="pageNo">5</button>
+                <button value="6" class="pageNo">6</button>
+                <button value="7" class="pageNo">7</button>
+                <button value="8" class="pageNo">8</button>
+                <button value="9" class="pageNo">9</button>
+                <button value="10" class="pageNo">10</button>
+                <button id="forward">+1 →</button>
+                <button id="forwardFive">+5 ⇉</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h3>Platsbanken</h3>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

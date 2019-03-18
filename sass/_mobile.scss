@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    font-family: 'Geomanist-Regular', sans-serif;
+    background-color: #d3dbdd;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #fcc025;
+    height: 200px;
+    width: 100%;
+    color: #363636;
+    h1 {
+        margin: 15px 0 0 0;
+        font-family: 'Geomanist-Bold', sans-serif;
+        font-size: 3.2rem;
+        text-align: center;
+        letter-spacing: .05rem;
+    }
+    p {
+        letter-spacing: .1rem;
+        color: #363636;
+    }
+}
+
+.hero:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -160px;
+    width: 0;
+    height: 0;
+    border-top: solid 20px #fcc025;
+    border-left: solid 160px transparent;
+    border-right: solid 160px transparent;
+}
+
+#controllersContainer {
+    margin: 50px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #limitButtons {
+        margin-top: 10px;
+    }
+    label {
+        margin-top: 20px;
+        font-size: .8rem;
+    }
+    #occupationalField {
+        margin-top: 5px;
+        width: 300px;
+        height: 34px;
+        font-family: 'Geomanist-Regular', sans-serif;
+        font-size: .8rem;
+        letter-spacing: .05rem;
+    }
+    #searchInput {
+        margin-top: 5px;
+        padding: 10px;
+        width: 300px;
+        font-family: 'Geomanist-Regular', sans-serif;
+        font-size: .8rem;
+        letter-spacing: .05rem;
+        border: 1px solid #a6a6a6;
+        border-radius: 5px;
+    }
+}
+
+
+#jobWrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+}
+
+.loading {
+    margin: 40px 0;
+    text-align: center;
+    letter-spacing: .1rem;
+    img {
+        width: 50px;
+    }
+}
+
+.jobInfo {
+    margin: 20px; 
+    padding: 20px;
+    max-width: 600px;
+    width: 400px; 
+    height: auto;
+    background-color: #fff;
+    flex: auto; 
+    h2 {
+        margin: 0 0 20px 0;
+        font-family: 'Geomanist-Bold', sans-serif;
+    }
+    a {
+        @extend button;
+    }
+    a:hover {
+        @extend button:hover;
+    }
+    #backButton {
+        margin-bottom: 30px;
+    }
+}
+
+.copyUrlContainer {
+    position: relative;
+    display: inline-block;
+}
+.copyUrlContainer .toolTipText {
+    margin-left: -90px;
+    padding: 5px;
+    width: 180px;
+    font-family: sans-serif;
+    font-size: .7rem;
+    letter-spacing: .05rem;
+    color: #363636;
+    text-align: center;
+    background-color: hsla(46, 95%, 63%, 0.9);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 120%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms;
+}
+.copyUrlContainer .toolTipText::after {
+    content: "";
+    margin-left: -5px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: hsla(46, 95%, 63%, 0.9) transparent transparent transparent;
+}
+.copyUrlContainer:hover .toolTipText {
+    opacity: 1;
+    visibility: visible;
+}
+
+#copyUrlInput {
+    margin-bottom: 20px;
+    padding: 0 0 0 10px;
+    width: 300px;
+    height: 30px;
+    font-family: 'Geomanist-Regular', sans-serif;
+    letter-spacing: .05rem;
+    border: 1px solid #a6a6a6;
+}
+#savedJobsWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.savedJobs {
+    margin: 20px 0;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+    h2 {
+        margin: 0 0 20px 0;
+        font-family: 'Geomanist-Bold', sans-serif;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+        li {
+        margin: 10px 0;
+        }
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a:after {
+        display: block;
+        content: '';
+        border-bottom: 2px #000 solid;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+    }
+    a:hover:after {
+        transform: scaleX(1);
+        transform-origin:  50% 100%;
+    }
+    button {
+        margin-top: 10px;
+    }
+}
+
+button {
+    padding: 10px 20px 8px 20px;
+    font-family: 'Geomanist-Medium', sans-serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #363636;
+    transition: 400ms;
+}
+
+button:hover,
+.activeCounty,
+.activeLimit,
+.activePage {
+    color: #fff;
+    background-color: #363636;
+    cursor: pointer;
+}
+
+.bold {
+    font-family: 'Geomanist-Medium', sans-serif;
+}
+
+.readMore,
+.jobTitle {
+    margin-top: 30px;
+}
+
+.availableJobs {
+    margin-bottom: 20px;
+}
+
+.text {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    white-space: pre-line;
+    border-bottom: 1px solid #000;
+}
+
+.fullWidth {
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+#paginationWrapper {
+    margin: 10px 0 40px 0;
+    text-align: center;
+}
+
+footer {
+    padding: 20px 40px;
+    height: 200px;
+    letter-spacing: .1rem;
+    color: #fff;
+    background-color: #363636;
+}
+
+::selection {
+    background: #fad046;
+    color: #000;
+}
+
+:focus {
+    outline: 1;
+    outline-color: #fad046;
+}

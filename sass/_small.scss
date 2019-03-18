@@ -1,0 +1,25 @@
+.hero {
+    h1 {
+        font-size: 2.7rem;
+    }
+}
+
+.hero:after {
+    margin-left: -120px;
+    border-left: solid 120px transparent;
+    border-right: solid 120px transparent;
+}
+
+#skane {
+    margin-top: 10px;
+}
+
+.jobInfo {
+    width: 200px;
+    margin: 10px;
+}
+
+.pageNo {
+    width: 60px;
+    margin: 5px;
+}

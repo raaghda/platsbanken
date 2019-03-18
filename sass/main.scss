@@ -1,0 +1,10 @@
+@import '_mobile';
+@import '_fonts';
+
+@media screen and (min-width: 570px) {
+    @import '_tablet';
+}
+
+@media screen and (max-width: 360px) {
+    @import '_small';
+}
