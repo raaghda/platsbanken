@@ -13,6 +13,5 @@ Technical Description
 
 Other Notes:
 
-API used: http://jobtechdev.se/swagger/ 
-
+API used: http://jobtechdev.se/swagger/.
 Font used: Geomanist
